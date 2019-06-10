@@ -58,19 +58,19 @@ The Below Shows the Start Page when the Django Application is Initially Starts, 
 ![Start Page of Django Application](https://github.com/jsaikrishna/Shipwell-AverageWeather/blob/master/images/startPage.png)
 
 
-# Average Temperaure Output of Latitude and Longitude
+# Average Temperaure Output for the given Latitude and Longitude
 So, Now once the user enter's the latitude and longitude as input and select the filter then the output result with the average temperature is displayed in the below image, also the validation of input latitude and longitude are done using Google Map's API and the result is also shown in the image below.
 
 ![Longitude and Latitude Input](https://github.com/jsaikrishna/Shipwell-AverageWeather/blob/master/images/coordinates.png)
 
 
-# Average Temperaure Output of Zipcode
+# Average Temperaure Output for the given Zipcode
 So, Now the user enters the zipcode as input and select the filter then the output result with the average temperature is displayed in the below image, also the validation of zipcode's latitude and longitude are done using Google Map's API and the result is also shown in the image below.
 
 ![ZipCode Input](https://github.com/jsaikrishna/Shipwell-AverageWeather/blob/master/images/zipCode.png)
 
 
-# Average Temperaure Output of Latitude and Longitude and Zipcode
+# Average Temperaure Output for the given Latitude, Longitude and Zipcode
 So, Now once the user enters both the zipcode and the latitude and longitude as input and select the filter then the output result with the average temperature is displayed in the below image and also while calculating the average temperature zipcode's latitude and longitude is considered., also the validation of zipcode's latitude and longitude are done using Google Map's API and the result is also shown in the image below.
 
 ![ZipCode and Longitude and Latitude Input](https://github.com/jsaikrishna/Shipwell-AverageWeather/blob/master/images/zipCode%20and%20Coordinates.png)
