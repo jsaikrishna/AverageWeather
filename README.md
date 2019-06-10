@@ -23,3 +23,7 @@ http://127.0.0.1:8000/
 
 ```
 
+The Below Shows the Start Page when the Django Application is Initially Starts, where user can either enter zipcode or (latitude, longitude) only, if the user enter both then zip code is entered to calculate the average weather, also user has a choose the one or more filter by select the check boxe's below.
+
+[Start Page of Django Application](https://github.com/jsaikrishna/Shipwell-AverageWeather/blob/master/images/startPage.png)
+
