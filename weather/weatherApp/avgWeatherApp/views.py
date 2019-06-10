@@ -2,8 +2,7 @@ from django.shortcuts import render
 
 from .forms import inputForm
 import requests
-# from geopy.geocoders import Nominatim
-# geolocator = Nominatim()
+
 import googlemaps
 gmaps = googlemaps.Client(key='AIzaSyBLhD_mE5pUbRsmm7gC94KuYsF75IS9TQ8')
 
@@ -31,7 +30,7 @@ def index(request):
             if latitude_numerical_check and longitude_numerical_check and zipcode_numerical_check:
 
                 # Function to get the latitude, longitude and address object
-                float_latitude, float_longitude, reverse_geocode_result = getCordinates(latitude, longitude, zipcode)
+                latitude, longitude, float_latitude, float_longitude, reverse_geocode_result = getCordinates(latitude, longitude, zipcode)
 
                 if reverse_geocode_result: # Checking if address object is null or not null
                     for filter in filters:
@@ -44,6 +43,7 @@ def index(request):
 
                     # Temperature List is formed by adding the current temperatures of each filter.
                     # Calculating the Average Temperature from the temperatures List
+
                     average_Temperature = {'average_temperatures': sum(temperatures) / len(temperatures)}
 
                     CoOrdinates_are_Not_Valid = 'Yes, Co-Ordinates are Valid'
@@ -93,19 +93,6 @@ def validate(latitude, longitude, zipcode):
     return latitude_numerical_check, longitude_numerical_check, zipcode_numerical_check
 
 
-def getCoordinates(zipcode):
-    # Code to get the latitude and longitude from the Google Maps API
-
-    float_latitude = 0
-    float_longitude = 0
-
-    latitude = gmaps.geocode(zipcode)[0]['geometry']['bounds']['northeast']['lat']
-    longitude = gmaps.geocode(zipcode)[0]['geometry']['bounds']['northeast']['lng']
-    float_latitude = float(latitude)
-    float_longitude = float(longitude)
-
-    return float_latitude, float_longitude
-
 def getCordinates(latitude, longitude, zipcode):
     # Code to get the latitude, longitude and address object
     float_latitude = 0
@@ -118,12 +105,26 @@ def getCordinates(latitude, longitude, zipcode):
 
     # Function to get the latitudes and longitudes from Google Map's API
     if zipcode and len(zipcode) == 5:
-        float_latitude, float_longitude = getCoordinates(zipcode)
+        latitude, longitude,float_latitude, float_longitude = getCoordinates(zipcode)
 
     # Funnction to Validate the Ccordinatees using Google Map's API
     reverse_geocode_result = validateCoordinates(float_latitude, float_longitude)
-    print(reverse_geocode_result)
-    return float_latitude, float_longitude, reverse_geocode_result
+    #print(reverse_geocode_result)
+    return latitude, longitude,float_latitude, float_longitude, reverse_geocode_result
+
+def getCoordinates(zipcode):
+    # Code to get the latitude and longitude from the Google Maps API
+
+    float_latitude = 0
+    float_longitude = 0
+
+    latitude = gmaps.geocode(zipcode)[0]['geometry']['bounds']['northeast']['lat']
+    longitude = gmaps.geocode(zipcode)[0]['geometry']['bounds']['northeast']['lng']
+    float_latitude = float(latitude)
+    float_longitude = float(longitude)
+
+    return latitude, longitude, float_latitude, float_longitude
+
 
 def validateCoordinates(float_latitude, float_longitude):
     # Code to Validate the Ccordinatees using Google Map's API
@@ -152,6 +153,7 @@ def noaa(noaa_url, filter, latitude, longitude, temperatures):
 
 
 def weatherdotcom(weatherdotcom_url, filter, latitude, longitude, temperatures):
+
     json = {"lat": latitude, "lon": longitude}
     r = requests.post(weatherdotcom_url.format(filter), None, json)
 
