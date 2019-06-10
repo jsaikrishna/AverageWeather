@@ -46,7 +46,7 @@ python manage.py runserver
 
 ```
 
-After Starting the Django Application, make sure to start the Provided Flast Application Server to access the different weather filters in the Local Machine by following the instructions in the provided Link below;
+After Starting the Django Application, make sure to start the Provided Flask Application Server to access the different weather filters in the Local Machine by following the instructions in the provided Link below;
 
 ```
 https://github.com/shipwell/mock-weather-api
