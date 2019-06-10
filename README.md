@@ -43,6 +43,6 @@ So, Now once the user enter's both the zipcode and the latitude and longitude as
 ![ZipCode and Longitude and Latitude Input](https://github.com/jsaikrishna/Shipwell-AverageWeather/blob/master/images/zipCode%20and%20Coordinates.png)
 
 
-
+Also, the Bonus Functionality is also implemented where the Validation of the lat/lon with the Google Maps API and Also accepting zip codes and convert to lat/lon using the Google Maps API.
 
 
