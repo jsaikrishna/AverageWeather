@@ -7,7 +7,7 @@
 * Calculation of Average Temperature based on the given Zipcode.
 
 # Project Setup
-The Source Code for the Django Application is in the folder weather/weatherApp
+The Source Code for the Django Application is in the folder weather/weatherApp/avgWeatherApp/
 
 To run the project clone the Entire Git Repository into the local machine, then iterate into weather/weatherApp folder.
 
