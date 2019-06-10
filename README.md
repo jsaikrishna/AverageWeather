@@ -1,5 +1,11 @@
 # Shipwell-Average-Weather
 
+# Implemented Features
+* Calculation the Average Temperature based on the given Latitude and Longitude.
+* Validation of Given Latitude and Longitude with the Google Maps API.
+* Conversion of Given Zipcode to Latitude and Longitude using the Google Maps API.
+* Calculation of Average Temperature based on the given Zipcode.
+
 The Source Code for the Django Application is in the folder weather/weatherApp
 
 To run the project clone the Entire Git Repository into the local machine, then iterate into weather/weatherApp folder.
