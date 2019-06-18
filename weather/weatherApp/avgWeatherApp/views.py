@@ -4,7 +4,7 @@ from .forms import inputForm
 import requests
 
 import googlemaps
-gmaps = googlemaps.Client(key='AIzaSyBLhD_mE5pUbRsmm7gC94KuYsF75IS9TQ8')
+gmaps = googlemaps.Client(key='Enter the key here from the Google Cloud to call the Geocoding API')
 
 weather_sources = []
 
