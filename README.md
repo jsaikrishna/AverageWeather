@@ -1,4 +1,4 @@
-# Shipwell-Average-Weather
+# Average-Weather
 
 # Implemented Features
 * Calculation of Average Temperature based on the given Latitude and Longitude.
